@@ -1,0 +1,229 @@
+<!doctype html><html lang="uz"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>GeoPro.uz</title>
+<meta name="description" content="GeoPro — taxeometr yoki nivelir TXT faylidan tayyor ijro sxemasi (DXF, PDF, Excel) 3 qadamda, AutoCAD va Civil 3D'siz. Windows uchun yuklab oling.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: one 1120px column; hero = text + app screenshot over a faint survey grid; sections separated by eyebrow labels, not cards. */
+:root{
+  --bg:#F6F8FB; --panel:#FFFFFF; --ink:#15213A; --muted:#5B6B85; --line:#D8E0EC;
+  --accent:#0B7FD6; --accent-2:#00A9BD; --on-accent:#FFFFFF; --grid:rgba(11,127,214,.09); --soft:#EAF3FC; --ok:#1E7B34;
+  --display:'Manrope',system-ui,-apple-system,'Segoe UI',sans-serif; --body:'IBM Plex Sans','Segoe UI',system-ui,sans-serif;
+  --shadow:0 18px 50px rgba(21,33,58,.12);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0B1220; --panel:#121A2B; --ink:#E3EBF7; --muted:#8E9DB8; --line:#243049;
+  --accent:#00D4FF; --accent-2:#7B5CFF; --on-accent:#07101F; --grid:rgba(0,212,255,.07); --soft:#132238; --ok:#4CE0A6;
+  --shadow:0 18px 50px rgba(0,0,0,.45); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0B1220; --panel:#121A2B; --ink:#E3EBF7; --muted:#8E9DB8; --line:#243049;
+  --accent:#00D4FF; --accent-2:#7B5CFF; --on-accent:#07101F; --grid:rgba(0,212,255,.07); --soft:#132238; --ok:#4CE0A6;
+  --shadow:0 18px 50px rgba(0,0,0,.45); color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0}
+a{color:var(--accent)} img{max-width:100%;height:auto;display:block}
+.wrap{max-width:1120px;margin:0 auto}
+h1,h2,h3{font-family:var(--display);line-height:1.12;text-wrap:balance;margin:0}
+h1{font-size:clamp(34px,5.2vw,58px);font-weight:800;letter-spacing:-.02em}
+h2{font-size:clamp(26px,3.4vw,38px);font-weight:800;letter-spacing:-.015em}
+h3{font-size:20px;font-weight:700}
+p{margin:0}
+.eyebrow{font-family:var(--display);font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.muted{color:var(--muted)}
+/* top bar */
+.top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-family:var(--display);font-weight:800;font-size:22px}
+.brand img{width:38px;height:38px}
+.nav{display:flex;gap:4px 18px;flex-wrap:wrap;font-size:15px}
+.nav a{color:var(--muted);text-decoration:none;font-weight:500;padding:6px 0}
+.nav a:hover,.nav a:focus-visible{color:var(--accent)}
+/* hero */
+.hero{position:relative;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:40px;align-items:center;padding-block:56px 48px}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+  background-size:48px 48px;mask-image:radial-gradient(ellipse at 30% 40%,#000 30%,transparent 75%);-webkit-mask-image:radial-gradient(ellipse at 30% 40%,#000 30%,transparent 75%)}
+.hero .lead{font-size:clamp(17px,1.6vw,20px);color:var(--muted);max-width:34em;margin-top:18px}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:13px 20px;border-radius:12px;font-family:var(--display);font-weight:700;
+  font-size:16px;text-decoration:none;border:1.5px solid var(--line);color:var(--ink);background:var(--panel);min-width:0}
+.btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:var(--on-accent);border-color:transparent}
+.btn .sub{display:block;font-family:var(--body);font-weight:400;font-size:12px;opacity:.8;line-height:1.2}
+.btn.soon{opacity:.62;cursor:default}
+.btn:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.ticks{display:flex;gap:22px;flex-wrap:wrap;margin-top:26px;font-size:14px;color:var(--muted);font-variant-numeric:tabular-nums}
+.ticks b{color:var(--ink);font-family:var(--display);font-size:20px;display:block}
+.shot{border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:var(--shadow);background:var(--panel)}
+.shot img{width:100%}
+.shot figcaption{padding:10px 14px;font-size:13px;color:var(--muted);border-top:1px solid var(--line)}
+/* sections */
+section{padding-block:56px;border-top:1px solid var(--line)}
+.sec-head{display:grid;gap:10px;max-width:40em;margin-bottom:30px}
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.step{padding:22px;border:1px solid var(--line);border-radius:14px;background:var(--panel);display:grid;gap:10px;min-width:0}
+.step .n{font-family:var(--display);font-weight:800;font-size:13px;color:var(--accent);letter-spacing:.08em}
+.step kbd{font-family:var(--body);font-size:13px;background:var(--soft);border:1px solid var(--line);border-radius:6px;padding:2px 7px}
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:36px;align-items:center}
+.feat{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px 28px}
+.feat div{display:grid;gap:4px;padding-block:14px;border-top:2px solid var(--line);min-width:0}
+.feat div:nth-child(-n+3){border-top-color:var(--accent)}
+.feat b{font-family:var(--display);font-size:16px}
+.feat span{font-size:15px;color:var(--muted)}
+.price{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:28px}
+.price .big{font-family:var(--display);font-size:clamp(40px,6vw,68px);font-weight:800;letter-spacing:-.02em;line-height:1;font-variant-numeric:tabular-nums}
+.price .big small{font-size:.38em;font-weight:700;color:var(--muted);letter-spacing:0;margin-left:8px}
+.pbox{padding:24px;border-radius:14px;background:var(--soft);display:grid;gap:12px;align-content:start}
+.pbox li{margin:0}
+ol.guide{padding-left:1.3em;display:grid;gap:12px;max-width:42em}
+ol.guide li::marker{font-family:var(--display);font-weight:800;color:var(--accent)}
+details{border-top:1px solid var(--line);padding-block:12px}
+details:last-of-type{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;font-weight:600;font-family:var(--display);font-size:17px;list-style:none;display:flex;justify-content:space-between;gap:14px}
+summary::after{content:"+";color:var(--accent);font-weight:800}
+details[open] summary::after{content:"–"}
+details p{margin-top:8px;color:var(--muted);max-width:44em}
+.video{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;margin-top:28px}
+.vbox{aspect-ratio:16/9;max-width:100%;border:1px dashed var(--line);border-radius:14px;display:grid;place-items:center;text-align:center;padding:20px;background:var(--panel);color:var(--muted)}
+.vbox b{font-family:var(--display);color:var(--ink);display:block;margin-bottom:6px}
+.contacts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.card{padding:20px;border:1px solid var(--line);border-radius:14px;background:var(--panel);display:grid;gap:8px;min-width:0}
+.card .k{font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;font-family:var(--display);font-weight:700}
+.card .v{font-family:var(--display);font-weight:700;font-size:20px;word-break:break-word}
+.card .row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.copy{font:inherit;font-size:13px;padding:6px 10px;border-radius:8px;border:1px solid var(--line);background:var(--bg);color:var(--ink);cursor:pointer}
+.copy:focus-visible{outline:3px solid var(--accent)}
+footer{padding-block:28px 40px;border-top:1px solid var(--line);color:var(--muted);font-size:14px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+@media (max-width:860px){.hero,.two,.price,.video{grid-template-columns:1fr}.steps,.contacts,.feat{grid-template-columns:1fr}.feat div:nth-child(-n+3){border-top-color:var(--line)}.feat div:first-child{border-top-color:var(--accent)}.hero{padding-block:36px 32px}}
+@media (prefers-reduced-motion:no-preference){.btn.primary{transition:transform .15s}.btn.primary:hover{transform:translateY(-1px)}}
+</style>
+<meta property="og:title" content="GeoPro — ijro sxemasi dasturi"><meta property="og:description" content="Taxeometr TXT'dan tayyor ijro sxemasi 3 qadamda, AutoCAD'siz. Windows uchun yuklab oling."><meta property="og:image" content="img/app_sheet.jpg"><meta property="og:url" content="https://geopro.uz/"><link rel="icon" href="img/logo.png"><link rel="canonical" href="https://geopro.uz/"><script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"GeoPro","operatingSystem":"Windows 10, Windows 11","applicationCategory":"BusinessApplication","description":"Taxeometr TXT faylidan tayyor ijro sxemasi (DXF, PDF, Excel), AutoCAD va Civil 3D'siz.","url":"https://geopro.uz/","offers":{"@type":"Offer","price":"10000","priceCurrency":"UZS"}}</script></head><body>
+<div class="wrap">
+<header class="top">
+  <a class="brand" href="#top"><img src="img/logo.png" alt="GeoPro logotipi" width="38" height="38">GeoPro<span class="muted" style="font-weight:500;font-size:15px">.uz</span></a>
+  <nav class="nav" aria-label="Bo'limlar">
+    <a href="#yuklab-olish">Yuklab olish</a><a href="#qanday">Qanday ishlaydi</a><a href="#imkoniyatlar">Imkoniyatlar</a>
+    <a href="#narx">Narx</a><a href="#qollanma">Qo'llanma</a><a href="#aloqa">Aloqa</a>
+  </nav>
+</header>
+
+<section class="hero" id="top" style="border-top:0">
+  <div>
+    <p class="eyebrow">Geodezistlar va PTO uchun dastur</p>
+    <h1 style="margin-top:12px">Taxeometr TXT'dan tayyor ijro sxemasi</h1>
+    <p class="lead">Nuqtalar faylini tashlang — GeoPro brovka va tubni ajratadi, hajmni hisoblaydi va ramka, shtamp, plan va razrez bilan A4 listni chiqaradi. AutoCAD ham, Civil 3D ham kerak emas.</p>
+    <div class="cta" id="yuklab-olish">
+      <a class="btn primary" href="https://t.me/geopro_uz">⬇ Windows uchun yuklab olish<span class="sub">GeoPro 1.3.0 · 40 MB · Windows 10/11 · Telegram kanalida</span></a>
+      <span class="btn soon" aria-disabled="true">Android<span class="sub">tez kunda — Play Market</span></span>
+      <span class="btn soon" aria-disabled="true">iOS<span class="sub">tez kunda — App Store</span></span>
+    </div>
+    <div class="ticks">
+      <div><b>3 qadam</b>TXT → tekshir → tayyor</div>
+      <div><b>0,01 m³</b>Civil 3D bilan mos hajm</div>
+      <div><b>1 fayl bepul</b>keyingisi 10 000 so'm</div>
+    </div>
+  </div>
+  <figure class="shot" style="margin:0">
+    <img src="img/app_sheet.jpg" alt="GeoPro oynasi: TXT ochilgan, ijro sxemasi listi avtomatik ko'rinib turibdi" width="1120" height="688">
+    <figcaption>TXT ochilishi bilan tayyor list ko'rinadi: ramka, shtamp, otmetkali plan, razrez 1-1, hajm va maydon.</figcaption>
+  </figure>
+</section>
+
+<section id="qanday">
+  <div class="sec-head"><p class="eyebrow">Qanday ishlaydi</p><h2>Uch tugma — va list tayyor</h2>
+    <p class="muted">Dasturning yuqorisida uchta katta tugma bor. Boshqa hech narsa o'rganish shart emas.</p></div>
+  <div class="steps">
+    <div class="step"><span class="n">1-QADAM</span><h3>TXT ochish</h3><p class="muted">Taxeometr yoki nivelir faylini oynaga tashlang: <kbd>nom, X, Y, H</kbd> qatorlar yoki Leica GSI. Tayanch nuqtalar o'zi ajratiladi.</p></div>
+    <div class="step"><span class="n">2-QADAM</span><h3>Listni tekshirish</h3><p class="muted">Planda ko'k nuqtalar — brovka, to'q sariq — tub. Xato bo'lsa o'ng tugma bilan turini o'zgartiring, nuqtani surib qo'ying — hajm qayta hisoblanadi.</p></div>
+    <div class="step"><span class="n">3-QADAM</span><h3>Tayyor</h3><p class="muted">TXT yonida papka ochiladi: <kbd>…_IS.pdf</kbd> (A4 listlar), <kbd>…_IS_1.dxf</kbd> (AutoCAD/nanoCAD uchun chizma), <kbd>…_hisob.xlsx</kbd> (nuqtalar, hajm, razrez).</p></div>
+  </div>
+</section>
+
+<section id="natija">
+  <div class="two">
+    <div>
+      <p class="eyebrow">Natija</p><h2 style="margin-top:10px">Geodezist qo'lda chizganidek</h2>
+      <p class="muted" style="margin-top:14px;max-width:34em">List namuna bo'yicha quriladi: ramka va shtamp, obyekt nomi, otmetkali plan, razrez 1-1 (uzun transheyalarda 2-2 ham), hajm va maydon, imzolar. Podoshva brovkadan 0,40 m ichkarida — Civil 3D'dagi usul; hajm ikki TIN yuza orasida aniq integral bilan hisoblanadi.</p>
+      <p class="muted" style="margin-top:14px;max-width:34em">Loyiha chizmasini (DXF/DWG) qo'shsangiz, o'qlar va poydevorlar plan ostida chiqadi — ijro sxemasi bino o'qlariga nisbatan ko'rsatiladi. O'z ramka-shtampingiz bo'lsa, namuna listni bering — dastur undan shablon yasaydi.</p>
+    </div>
+    <figure class="shot" style="margin:0"><img src="img/sheet.jpg" alt="GeoPro chiqargan ijro sxemasi listi: loyiha o'qlari ustida transheya plani, ikki razrez, shtamp" width="1000" height="707"><figcaption>Albom A4 list: loyiha o'qlari ustida transheya, razrez 1-1 va 2-2, hajm yozuvi, shtamp.</figcaption></figure>
+  </div>
+</section>
+
+<section id="imkoniyatlar">
+  <div class="sec-head"><p class="eyebrow">Imkoniyatlar</p><h2>Dasturda nima bor</h2></div>
+  <div class="feat">
+    <div><b>Aniq hajm</b><span>Constrained Delaunay TIN, brovka va podoshva — struktura chiziqlari. Namunada Civil 3D bilan 1301,49 m³ aynan mos.</span></div>
+    <div><b>Loyiha chizmasi fon</b><span>DXF/DWG o'qlar va poydevorlar plan ostida; ikki nuqta bo'yicha bog'lash.</span></div>
+    <div><b>O'z listingiz</b><span>Namuna ijro sxemangizdan ramka va shtamp olinadi; sana, hajm, list raqamlari o'zi qo'yiladi.</span></div>
+    <div><b>Bir necha uchastka</b><span>Bitta faylda bir necha kotlovan yoki transheya — har biri alohida list.</span></div>
+    <div><b>Tahrirlash</b><span>Jadvalda X, Y, H; planda nuqtani surish; loyiha .geopro faylga saqlanadi va tarixdan qayta ochiladi.</span></div>
+    <div><b>Loyihalar ro'yxati</b><span>Shtamp ma'lumotlari (obyekt, tashkilot, asbob, ±0.000) nom bilan saqlanadi — bir bosishda tanlanadi.</span></div>
+    <div><b>Uch til</b><span>O'zbek, Русский, English interfeys; list va Excel — hujjat standarti bo'yicha ruscha.</span></div>
+    <div><b>7 ta rang mavzusi</b><span>Qorong'i va yorug' mavzular, zamonaviy menyular, qulay Import / Eksport.</span></div>
+    <div><b>Avto-yangilanish</b><span>Yangi versiya chiqsa dastur o'zi aytadi — bir tugma bilan yangilanadi.</span></div>
+  </div>
+</section>
+
+<section id="narx">
+  <div class="price">
+    <div>
+      <p class="eyebrow">Narx</p>
+      <h2 style="margin-top:10px">Birinchi fayl bepul</h2>
+      <p class="big" style="margin-top:18px">10 000<small>so'm / keyingi har bir TXT</small></p>
+      <p class="muted" style="margin-top:16px;max-width:34em">Bir xil faylni tuzatib qayta eksport qilish bepul. Loginsiz dastur demo rejimda ishlaydi — hammasi ochiq, faqat listda «ДЕМО-ВЕРСИЯ» yozuvi chiqadi.</p>
+    </div>
+    <div class="pbox">
+      <b style="font-family:var(--display)">Qanday ulanadi</b>
+      <ol style="margin:0;padding-left:1.2em;display:grid;gap:8px">
+        <li>Dasturni o'rnating va Telegram orqali <b>login + parol</b> so'rang (bitta login — bir necha xodim).</li>
+        <li>Birinchi TXT faylni bepul chiqaring.</li>
+        <li>Keyin «Litsenziya va to'lov» oynasida kartaga to'lang, kompyuter kodi va chekni yuboring — to'ldirish kodini oling.</li>
+      </ol>
+      <a class="btn primary" href="https://t.me/geopro_uz" style="justify-self:start">Login olish — Telegram</a>
+    </div>
+  </div>
+</section>
+
+<section id="qollanma">
+  <div class="sec-head"><p class="eyebrow">Qo'llanma</p><h2>Yozma va video qo'llanma</h2>
+    <p class="muted">Dastur ichida ham to'liq qo'llanma bor: «Yordam» tugmasi yoki F1 — o'zbek, rus va ingliz tillarida.</p></div>
+  <ol class="guide">
+    <li><b>O'rnatish.</b> GeoPro_Setup_1.3.0.exe → Далее → Установить. Ish stolida GeoPro belgisi paydo bo'ladi.</li>
+    <li><b>Kirish.</b> Ochilganda login va parolni kiriting (yoki «Demo rejim»). Til va rang mavzusi — yuqori o'ngdagi tugmalar.</li>
+    <li><b>Shtamp.</b> O'ng panelda obyekt, tashkilot, asbob, ±0.000 ni bir marta to'ldiring, «Loyiha» ro'yxatiga nom bilan saqlang.</li>
+    <li><b>TXT.</b> Faylni oynaga tashlang — list darhol ko'rinadi. Nuqta turini tekshiring (brovka / tub), kerak bo'lsa o'ng tugma.</li>
+    <li><b>Loyiha chizmasi (ixtiyoriy).</b> «Loyiha fayllari» → chizma DXF/DWG; boshqa koordinatada bo'lsa «Bog'lash…» — 2 nuqta.</li>
+    <li><b>Tayyor.</b> «3 Tayyor» — DXF, PDF, Excel papkada. Keyin ham «Tarix» (Ctrl+H) orqali qayta ochib tuzatish mumkin — bepul.</li>
+  </ol>
+  <div class="video">
+    <div class="vbox"><div><b>Video qo'llanma</b>Tez kunda YouTube va Telegram kanalida: TXT'dan listgacha 3 daqiqada.</div></div>
+    <div>
+      <details open><summary>Hajm qo'l hisobidan farq qilsa?</summary><p>«Natija» bo'limida asosiy va nazorat hisobi bor. Katta farq — devor yonidagi tub nuqtalari brovkadan uzoq olingan; planni tekshiring. Podoshva masofasi «Qo'shimcha» da o'zgartiriladi (standart 0,40 m).</p></details>
+      <details><summary>Dastur nuqtalarni noto'g'ri bo'ldi?</summary><p>Jadvalda «Uch.» ustuniga uchastka raqamini qo'lda kiriting; nuqta turini o'ng tugma bilan belgilang. Siyrak s'yomka (har joyda brovka+tub juftligi) ham to'g'ri o'qiladi.</p></details>
+      <details><summary>DWG ochilmayapti?</summary><p>Bepul ODA File Converter o'rnating yoki chizmani istalgan CAD dasturida DXF qilib saqlang — DXF to'g'ridan-to'g'ri ochiladi.</p></details>
+      <details><summary>Bitta login nechta kompyuterda ishlaydi?</summary><p>Cheklanmagan — login xodimlarga beriladi. Balans (fayllar soni) har kompyuterda alohida hisoblanadi.</p></details>
+    </div>
+  </div>
+</section>
+
+<section id="aloqa">
+  <div class="sec-head"><p class="eyebrow">Aloqa</p><h2>Savol, login, to'lov — yozing</h2></div>
+  <div class="contacts">
+    <div class="card"><span class="k">Telegram kanal</span><span class="v">@geopro_uz</span><div class="row"><a class="btn" href="https://t.me/geopro_uz" style="padding:9px 14px;font-size:14px">Kanalga o'tish</a><button class="copy" type="button" data-copy="https://t.me/geopro_uz">Havolani nusxalash</button></div><span class="muted" style="font-size:14px">Yangilanishlar, o'rnatuvchi, video darslar.</span></div>
+    <div class="card"><span class="k">Instagram</span><span class="v">@geopro.uz</span><div class="row"><a class="btn" href="https://instagram.com/geopro.uz" style="padding:9px 14px;font-size:14px">Profilga o'tish</a><button class="copy" type="button" data-copy="https://instagram.com/geopro.uz">Havolani nusxalash</button></div><span class="muted" style="font-size:14px">Misollar, qisqa videolar, yangiliklar.</span></div>
+    <div class="card"><span class="k">Telefon</span><span class="v" id="phone">+998 (raqam qo'shiladi)</span><div class="row"><button class="copy" type="button" data-copy="+998">Nusxalash</button></div><span class="muted" style="font-size:14px">Ishlab chiquvchi: Bekzod Raimov, Toshkent.</span></div>
+  </div>
+</section>
+
+<footer><span>© 2026 GeoPro · geopro.uz · Toshkent</span><span>GeoPro — ijro sxemalari uchun dastur. Windows 10/11.</span></footer>
+</div>
+<script>
+document.querySelectorAll('.copy').forEach(function(b){
+  b.addEventListener('click',function(){
+    var t=b.getAttribute('data-copy'), done=function(){var o=b.textContent;b.textContent='Nusxalandi';setTimeout(function(){b.textContent=o},1400)};
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,function(){fallback()})}else{fallback()}
+    function fallback(){var i=document.createElement('textarea');i.value=t;document.body.appendChild(i);i.select();try{document.execCommand('copy');done()}catch(e){}document.body.removeChild(i)}
+  });
+});
+</script>
+</body></html>
