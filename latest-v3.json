@@ -1,10 +1,10 @@
 {
- "version": "1.3.5",
- "url": "https://raw.githubusercontent.com/braimov2002-svg/geopro/main/docs/dl/GeoPro_Setup_1.3.5.exe",
- "size": 43526331,
- "sha256": "00d9b0eae30507c31fdb32a701168b71a3ee1313084989a0141dc1d058131b7d",
- "notes": "Avtomatik yangilanish: dastur serverga ulanadi, yangi versiyani o'zi yuklab oladi va yopilganda eski versiya o'rniga o'rnatadi (yoki «Yangilash» tugmasi bilan darhol). Yuklangan o'rnatuvchi va eski vaqtinchalik fayllar o'zi o'chiriladi — kompyuterda hech narsa to'planmaydi. DWG moduli va to'lov ma'lumotlari ham serverdan keladi.",
- "date": "2026-10-26",
+ "version": "1.4.0",
+ "url": "https://raw.githubusercontent.com/braimov2002-svg/geopro/main/docs/dl/GeoPro_Setup_1.4.0.exe",
+ "size": 46501055,
+ "sha256": "bd5eb1508bc9b1b644176d448adafa1b15009e858c835368eddbe8d407dfe817",
+ "notes": "Yangi boshlang'ich oyna va menyular. TXT ochilganda dastur s'yomka tushadigan loyiha chizmasini (DWG/DXF) o'zi topib taklif qiladi; «Chizma» menyusi: AutoCAD'da ochiq chizmani bir bosishda olish (Ctrl+Shift+D), chizmani qidirish (Ctrl+Shift+F), oxirgi chizmalar, qatlamlar, ikki nuqta bo'yicha bog'lash. Masofa o'lchash (M), bekor qilish / qaytarish (Ctrl+Z / Ctrl+Y), nuqta qidirish (Ctrl+F), avtosaqlash va nosozlikdan keyin tiklash. Noutbuk ekranlariga moslashuv, to'liq PDF qo'llanma (Yordam → To'liq qo'llanma).",
+ "date": "2026-10-27",
  "page": "https://github.com/braimov2002-svg/geopro/tree/main/docs/dl",
  "auto_from": "1.3.5",
  "payment": {
