@@ -74,6 +74,12 @@ section{padding-block:56px;border-top:1px solid var(--line)}
 .price .big small{font-size:.38em;font-weight:700;color:var(--muted);letter-spacing:0;margin-left:8px}
 .pbox{padding:24px;border-radius:14px;background:var(--soft);display:grid;gap:12px;align-content:start}
 .pbox li{margin:0}
+.payto{display:grid;gap:4px;padding:14px 16px;border-radius:12px;background:var(--panel);border:1px solid var(--line)}
+.payto .k{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;font-family:var(--display);font-weight:700}
+.payto .num{font-family:var(--display);font-weight:800;font-size:clamp(20px,2.4vw,24px);letter-spacing:.04em;font-variant-numeric:tabular-nums}
+.payto .row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.card .v a{color:inherit;text-decoration:none}
+.card .v a:hover{text-decoration:underline}
 ol.guide{padding-left:1.3em;display:grid;gap:12px;max-width:42em}
 ol.guide li::marker{font-family:var(--display);font-weight:800;color:var(--accent)}
 details{border-top:1px solid var(--line);padding-block:12px}
@@ -96,7 +102,7 @@ footer{padding-block:28px 40px;border-top:1px solid var(--line);color:var(--mute
 @media (max-width:860px){.hero,.two,.price,.video{grid-template-columns:1fr}.steps,.contacts,.feat{grid-template-columns:1fr}.feat div:nth-child(-n+3){border-top-color:var(--line)}.feat div:first-child{border-top-color:var(--accent)}.hero{padding-block:36px 32px}}
 @media (prefers-reduced-motion:no-preference){.btn.primary{transition:transform .15s}.btn.primary:hover{transform:translateY(-1px)}}
 </style>
-<meta property="og:title" content="GeoPro — ijro sxemasi dasturi"><meta property="og:description" content="Taxeometr TXT'dan tayyor ijro sxemasi 3 qadamda, AutoCAD'siz. Windows uchun yuklab oling."><meta property="og:image" content="img/app_sheet.jpg"><meta property="og:url" content="https://geopro.uz/"><link rel="icon" href="img/logo.png"><link rel="canonical" href="https://geopro.uz/"><script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"GeoPro","operatingSystem":"Windows 10, Windows 11","applicationCategory":"BusinessApplication","description":"Taxeometr TXT faylidan tayyor ijro sxemasi (DXF, PDF, Excel), AutoCAD va Civil 3D'siz.","url":"https://geopro.uz/","offers":{"@type":"Offer","price":"10000","priceCurrency":"UZS"}}</script></head><body>
+<meta property="og:title" content="GeoPro — ijro sxemasi dasturi"><meta property="og:description" content="Taxeometr TXT'dan tayyor ijro sxemasi 3 qadamda, AutoCAD'siz. Windows uchun yuklab oling."><meta property="og:image" content="img/app_sheet.jpg"><meta property="og:url" content="https://geopro.uz/"><link rel="icon" href="img/logo.png"><link rel="canonical" href="https://geopro.uz/"><script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"GeoPro","operatingSystem":"Windows 10, Windows 11","applicationCategory":"BusinessApplication","description":"Taxeometr TXT faylidan tayyor ijro sxemasi (DXF, PDF, Excel), AutoCAD va Civil 3D'siz.","url":"https://geopro.uz/","offers":{"@type":"Offer","price":"10000","priceCurrency":"UZS"},"author":{"@type":"Person","name":"Bekzod Raimov","telephone":"+998977721819"}}</script></head><body>
 <div class="wrap">
 <header class="top">
   <a class="brand" href="#top"><img src="img/logo.png" alt="GeoPro logotipi" width="38" height="38">GeoPro<span class="muted" style="font-weight:500;font-size:15px">.uz</span></a>
@@ -112,7 +118,7 @@ footer{padding-block:28px 40px;border-top:1px solid var(--line);color:var(--mute
     <h1 style="margin-top:12px">Taxeometr TXT'dan tayyor ijro sxemasi</h1>
     <p class="lead">Nuqtalar faylini tashlang — GeoPro brovka va tubni ajratadi, hajmni hisoblaydi va ramka, shtamp, plan va razrez bilan A4 listni chiqaradi. AutoCAD ham, Civil 3D ham kerak emas.</p>
     <div class="cta" id="yuklab-olish">
-      <a class="btn primary" href="https://raw.githubusercontent.com/braimov2002-svg/geopro/main/docs/dl/GeoPro_Setup_1.3.1.exe">⬇ Windows uchun yuklab olish<span class="sub">GeoPro 1.3.1 · 40 MB · Windows 10/11 · bepul o'rnatuvchi</span></a>
+      <a class="btn primary" href="https://raw.githubusercontent.com/braimov2002-svg/geopro/main/docs/dl/GeoPro_Setup_1.3.3.exe">⬇ Windows uchun yuklab olish<span class="sub">GeoPro 1.3.3 · 40 MB · Windows 10/11 · bepul o'rnatuvchi</span></a>
       <span class="btn soon" aria-disabled="true">Android<span class="sub">tez kunda — Play Market</span></span>
       <span class="btn soon" aria-disabled="true">iOS<span class="sub">tez kunda — App Store</span></span>
     </div>
@@ -177,9 +183,11 @@ footer{padding-block:28px 40px;border-top:1px solid var(--line);color:var(--mute
       <ol style="margin:0;padding-left:1.2em;display:grid;gap:8px">
         <li>Dasturni o'rnating va Telegram orqali <b>login + parol</b> so'rang (bitta login — bir necha xodim).</li>
         <li>Birinchi TXT faylni bepul chiqaring.</li>
-        <li>Keyin «Litsenziya va to'lov» oynasida kartaga to'lang, kompyuter kodi va chekni yuboring — to'ldirish kodini oling.</li>
+        <li>Keyin kartaga to'lang va chek, kompyuter kodi («Litsenziya va to'lov» oynasida) hamda fayllar sonini yuboring — to'ldirish kodini oling.</li>
       </ol>
-      <a class="btn primary" href="https://t.me/geopro_uz" style="justify-self:start">Login olish — Telegram</a>
+      <div class="payto"><span class="k">To'lov kartasi · Uzcard</span><span class="num">5614 6812 1912 9347</span>
+        <div class="row"><span class="muted" style="font-size:14px">RAIMOV BEKZOD</span><button class="copy" type="button" data-copy="5614681219129347">Raqamni nusxalash</button></div></div>
+      <a class="btn primary" href="https://t.me/raimov_bekzod" style="justify-self:start">Login olish — Telegram</a>
     </div>
   </div>
 </section>
@@ -188,7 +196,7 @@ footer{padding-block:28px 40px;border-top:1px solid var(--line);color:var(--mute
   <div class="sec-head"><p class="eyebrow">Qo'llanma</p><h2>Yozma va video qo'llanma</h2>
     <p class="muted">Dastur ichida ham to'liq qo'llanma bor: «Yordam» tugmasi yoki F1 — o'zbek, rus va ingliz tillarida.</p></div>
   <ol class="guide">
-    <li><b>O'rnatish.</b> GeoPro_Setup_1.3.1.exe → Далее → Установить. Ish stolida GeoPro belgisi paydo bo'ladi. Keyingi versiyalar dasturning o'zida bir tugma bilan yangilanadi.</li>
+    <li><b>O'rnatish.</b> GeoPro_Setup_1.3.3.exe → Далее → Установить. Ish stolida GeoPro belgisi paydo bo'ladi. Keyingi versiyalar dasturning o'zida bir tugma bilan yangilanadi.</li>
     <li><b>Kirish.</b> Ochilganda login va parolni kiriting (yoki «Demo rejim»). Til va rang mavzusi — yuqori o'ngdagi tugmalar.</li>
     <li><b>Shtamp.</b> O'ng panelda obyekt, tashkilot, asbob, ±0.000 ni bir marta to'ldiring, «Loyiha» ro'yxatiga nom bilan saqlang.</li>
     <li><b>TXT.</b> Faylni oynaga tashlang — list darhol ko'rinadi. Nuqta turini tekshiring (brovka / tub), kerak bo'lsa o'ng tugma.</li>
@@ -211,7 +219,7 @@ footer{padding-block:28px 40px;border-top:1px solid var(--line);color:var(--mute
   <div class="contacts">
     <div class="card"><span class="k">Telegram kanal</span><span class="v">@geopro_uz</span><div class="row"><a class="btn" href="https://t.me/geopro_uz" style="padding:9px 14px;font-size:14px">Kanalga o'tish</a><button class="copy" type="button" data-copy="https://t.me/geopro_uz">Havolani nusxalash</button></div><span class="muted" style="font-size:14px">Yangilanishlar, o'rnatuvchi, video darslar.</span></div>
     <div class="card"><span class="k">Instagram</span><span class="v">@geopro.uz</span><div class="row"><a class="btn" href="https://instagram.com/geopro.uz" style="padding:9px 14px;font-size:14px">Profilga o'tish</a><button class="copy" type="button" data-copy="https://instagram.com/geopro.uz">Havolani nusxalash</button></div><span class="muted" style="font-size:14px">Misollar, qisqa videolar, yangiliklar.</span></div>
-    <div class="card"><span class="k">Telefon</span><span class="v" id="phone">+998 (raqam qo'shiladi)</span><div class="row"><button class="copy" type="button" data-copy="+998">Nusxalash</button></div><span class="muted" style="font-size:14px">Ishlab chiquvchi: Bekzod Raimov, Toshkent.</span></div>
+    <div class="card"><span class="k">Telefon</span><span class="v" id="phone"><a href="tel:+998977721819">+998 97 772 18 19</a><br><a href="tel:+998950616011">+998 95 061 60 11</a></span><div class="row"><a class="btn" href="tel:+998977721819" style="padding:9px 14px;font-size:14px">Qo'ng'iroq qilish</a><button class="copy" type="button" data-copy="+998977721819">Nusxalash</button></div><span class="muted" style="font-size:14px">Ishlab chiquvchi: Bekzod Raimov, Toshkent. Login va to'lov: Telegram <a href="https://t.me/raimov_bekzod" style="color:inherit">@raimov_bekzod</a>.</span></div>
   </div>
 </section>
 
