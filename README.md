@@ -3,10 +3,14 @@
 Taxeometr / nivelir TXT faylidan tayyor ijro sxemasi (DXF, PDF, Excel) — AutoCAD va Civil 3D'siz.
 
 - Sayt: https://braimov2002-svg.github.io/geopro/ (GitHub Pages, `docs/`; domen ulangach — https://geopro.uz)
-- Yuklab olish (Windows 10/11): https://raw.githubusercontent.com/braimov2002-svg/geopro/main/docs/dl/GeoPro_Setup_1.5.3.exe
+- Yuklab olish (Windows 10/11): https://raw.githubusercontent.com/braimov2002-svg/geopro/main/docs/dl/GeoPro_Setup_1.6.0.exe
 - To'liq qo'llanma (PDF): [o'zbekcha](docs/GeoPro_qollanma_uz.pdf) · [ruscha](docs/GeoPro_qollanma_ru.pdf)
 - Yangilanishlar (1.3.5+): dastur ishga tushganda va har 4 soatda [`latest-v3.json`](latest-v3.json) ni tekshiradi, yangi versiyani fonda yuklab oladi va yopilganda eski versiya o'rniga o'rnatadi (yoki «Yangilash» tugmasi bilan darhol); yuklangan o'rnatuvchi keyin o'chiriladi. `latest.json` va `latest-v2.json` muzlatilgan: 1.0–1.3.4 o'zi yangilana olmaydi — bir marta joriy o'rnatuvchini o'rnatish kerak
 - Telegram: https://t.me/geopro_uz · Instagram: https://instagram.com/geopro.uz
+
+## 1.6 da nima yangi
+
+1.6.0: **«Tahrir» sahifasi** — loyiha chizmasi, s'yomka nuqtalari va list shtampini AutoCAD / Civil / Revit'dagidek tahrirlash: buyruq qatori (L, PL, REC, C, T, M, CO, RO, SC, MI, O, X, E, DI, AA, DIM, SE, XY, SS va Revit tugmalari MV, CC, MM, OF, DE, TX, DL, RE), *x,y* / *@dx,dy* / uzunlik son bilan, tortilish (uchi, o'rtasi, kesishma, s'yomka nuqtalari, F3) va Orto (F8), oldindan ko'rish; Xossalar va Qatlamlar paneli; bo'laklash (Explode) — butun bir blok bo'lib kelgan chizmani qismlab o'chirish; s'yomka nuqtalarini qo'shish / o'chirish / tahrirlash (hajm darhol qayta hisoblanadi); annotatsiya — o'lcham chizig'i, otmetka (kotlovan yuzasidan), koordinata, qiyalik; shtamp — matnni o'zgartirish, katakka yangi matn, chiziq, surish, o'chirish. Bitta Ctrl+Z tarixi. **Revit**: IFC modelni (Revit «Export → IFC») plan ostiga ochish — har qavat rejasi va o'qlar qatlamlarda; .rvt tanlansa — eksport yo'riqnomasi; **Revit uchun eksport** — nuqtalar CSV (Toposolid) va kotlovan yuzasi 3D DXF.
 
 ## 1.5 da nima yangi
 
