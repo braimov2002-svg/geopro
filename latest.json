@@ -1,8 +1,8 @@
 {
  "version": "1.0.0",
- "url": "https://raw.githubusercontent.com/braimov2002-svg/geopro/main/docs/dl/GeoPro_Setup_1.4.0.exe",
- "size": 46501055,
- "sha256": "bd5eb1508bc9b1b644176d448adafa1b15009e858c835368eddbe8d407dfe817",
+ "url": "https://raw.githubusercontent.com/braimov2002-svg/geopro/main/docs/dl/GeoPro_Setup_1.4.1.exe",
+ "size": 48826568,
+ "sha256": "8a0c0a84e9e6d543caf318838459ad5b1a18470cd3417bece09b026080dbf7c8",
  "notes": "Loyiha chizmasi (DXF/DWG) plan ostida, o'z list namunasi, loyihalar ro'yxati, Import/Export, 7 rang mavzusi, DWG moduli, avto-yangilanish.",
  "date": "2026-10-26",
  "comment": "Frozen for GeoPro 1.0–1.3.2: their update path is broken, no version is offered to them. GeoPro 1.3.5+ reads latest-v3.json."
