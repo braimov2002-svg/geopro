@@ -3,12 +3,14 @@
 Taxeometr / nivelir TXT faylidan tayyor ijro sxemasi (DXF, PDF, Excel) — AutoCAD va Civil 3D'siz.
 
 - Sayt: https://braimov2002-svg.github.io/geopro/ (GitHub Pages, `docs/`; domen ulangach — https://geopro.uz)
-- Yuklab olish (Windows 10/11): https://raw.githubusercontent.com/braimov2002-svg/geopro/main/docs/dl/GeoPro_Setup_1.5.2.exe
+- Yuklab olish (Windows 10/11): https://raw.githubusercontent.com/braimov2002-svg/geopro/main/docs/dl/GeoPro_Setup_1.5.3.exe
 - To'liq qo'llanma (PDF): [o'zbekcha](docs/GeoPro_qollanma_uz.pdf) · [ruscha](docs/GeoPro_qollanma_ru.pdf)
 - Yangilanishlar (1.3.5+): dastur ishga tushganda va har 4 soatda [`latest-v3.json`](latest-v3.json) ni tekshiradi, yangi versiyani fonda yuklab oladi va yopilganda eski versiya o'rniga o'rnatadi (yoki «Yangilash» tugmasi bilan darhol); yuklangan o'rnatuvchi keyin o'chiriladi. `latest.json` va `latest-v2.json` muzlatilgan: 1.0–1.3.4 o'zi yangilana olmaydi — bir marta joriy o'rnatuvchini o'rnatish kerak
 - Telegram: https://t.me/geopro_uz · Instagram: https://instagram.com/geopro.uz
 
 ## 1.5 da nima yangi
+
+1.5.3: loyiha chizmasini GeoPro ichida tahrirlash — «Chizmani tahrirlash» (Ctrl+Shift+E): bosib yoki ramka bilan tanlash (chapdan o'ngga — to'liq ichidagilar, o'ngdan chapga — tegib o'tganlar), Delete — o'chirish, «Faqat tanlangan qolsin», chiziq va matn qo'shish («GeoPro» qatlami), Ctrl+Z / Ctrl+Y; asl DWG/DXF o'zgarmaydi — tahrirlar ishga va loyihaga saqlanadi, listga tushadi; «O'zgartirilgan chizmani saqlash (DXF / DWG)…». Tor ekranda asboblar faqat belgilar bilan.
 
 1.5.2: «Tayyor» — natijani istalgan papkaga saqlash («Papkani tanlash…», «TXT yonida», «Ish stoli»; papka eslab qolinadi) va «Telegram'ga ham yuborish» — Telegram Desktop'ning o'z oynasida istalgan chatni (lichka, guruh, kanal) tanlaysiz, bot kerak emas; «Telegram'dan» (Ctrl+T) — Telegram'da olingan TXT/DWG/DXF ro'yxati; «Fayl → Eksport → Natijani Telegram'ga yuborish…».
 
