@@ -2,7 +2,7 @@
 
 Taxeometr / nivelir TXT faylidan tayyor ijro sxemasi (DXF, PDF, Excel) — AutoCAD va Civil 3D'siz.
 
-- Sayt: https://braimov2002-svg.github.io/geopro/ (GitHub Pages, `docs/`; domen ulangach — https://geopro.uz)
+- Sayt: https://braimov2002-svg.github.io/geopro/ (GitHub Pages, `docs/` papkasi; geopro.uz — boshqa kompaniyaning domeni, bizniki emas)
 - Yuklab olish (Windows 10/11): https://raw.githubusercontent.com/braimov2002-svg/geopro/main/docs/dl/GeoPro_Setup_1.6.0.exe
 - To'liq qo'llanma (PDF): [o'zbekcha](docs/GeoPro_qollanma_uz.pdf) · [ruscha](docs/GeoPro_qollanma_ru.pdf)
 - Yangilanishlar (1.3.5+): dastur ishga tushganda va har 4 soatda [`latest-v3.json`](latest-v3.json) ni tekshiradi, yangi versiyani fonda yuklab oladi va yopilganda eski versiya o'rniga o'rnatadi (yoki «Yangilash» tugmasi bilan darhol); yuklangan o'rnatuvchi keyin o'chiriladi. `latest.json` va `latest-v2.json` muzlatilgan: 1.0–1.3.4 o'zi yangilana olmaydi — bir marta joriy o'rnatuvchini o'rnatish kerak
