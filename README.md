@@ -3,12 +3,14 @@
 Taxeometr / nivelir TXT faylidan tayyor ijro sxemasi (DXF, PDF, Excel) — AutoCAD va Civil 3D'siz.
 
 - Sayt: https://braimov2002-svg.github.io/geopro/ (GitHub Pages, `docs/`; domen ulangach — https://geopro.uz)
-- Yuklab olish (Windows 10/11): https://raw.githubusercontent.com/braimov2002-svg/geopro/main/docs/dl/GeoPro_Setup_1.5.1.exe
+- Yuklab olish (Windows 10/11): https://raw.githubusercontent.com/braimov2002-svg/geopro/main/docs/dl/GeoPro_Setup_1.5.2.exe
 - To'liq qo'llanma (PDF): [o'zbekcha](docs/GeoPro_qollanma_uz.pdf) · [ruscha](docs/GeoPro_qollanma_ru.pdf)
 - Yangilanishlar (1.3.5+): dastur ishga tushganda va har 4 soatda [`latest-v3.json`](latest-v3.json) ni tekshiradi, yangi versiyani fonda yuklab oladi va yopilganda eski versiya o'rniga o'rnatadi (yoki «Yangilash» tugmasi bilan darhol); yuklangan o'rnatuvchi keyin o'chiriladi. `latest.json` va `latest-v2.json` muzlatilgan: 1.0–1.3.4 o'zi yangilana olmaydi — bir marta joriy o'rnatuvchini o'rnatish kerak
 - Telegram: https://t.me/geopro_uz · Instagram: https://instagram.com/geopro.uz
 
 ## 1.5 da nima yangi
+
+1.5.2: «Tayyor» — natijani istalgan papkaga saqlash («Papkani tanlash…», «TXT yonida», «Ish stoli»; papka eslab qolinadi) va «Telegram'ga ham yuborish» — Telegram Desktop'ning o'z oynasida istalgan chatni (lichka, guruh, kanal) tanlaysiz, bot kerak emas; «Telegram'dan» (Ctrl+T) — Telegram'da olingan TXT/DWG/DXF ro'yxati; «Fayl → Eksport → Natijani Telegram'ga yuborish…».
 
 1.5.1: loyiha chizmasini ikki nuqta bo'yicha bog'lash — nuqta tanlanmasa xato o'rniga nima yetishmayotgani aytiladi, tanlangan nuqtalar planda raqam bilan (qizil — chizma, yashil — s'yomka), noto'g'ri juftlar haqida ogohlantirish; kirish oynasida Enter endi maydondan maydonga o'tadi (oldin parolni yozmasdan yuborardi); eksport boshlanganda tanlangan hisob bilan balans yechiladi (eksport paytida chiqish/kirish ta'sir qilmaydi); til almashtirilganda «Nuqtalar» paneli va joriy sahifa saqlanadi; qorong'i mavzularda kirish oynasidan ochiladigan oynalar o'qiladi; M, Ctrl+F va «Ikki nuqta bo'yicha bog'lash» Plan sahifasini o'zi ochadi.
 
