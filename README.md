@@ -3,12 +3,14 @@
 Taxeometr / nivelir TXT faylidan tayyor ijro sxemasi (DXF, PDF, Excel) — AutoCAD va Civil 3D'siz.
 
 - Sayt: https://braimov2002-svg.github.io/geopro/ (GitHub Pages, `docs/`; domen ulangach — https://geopro.uz)
-- Yuklab olish (Windows 10/11): https://raw.githubusercontent.com/braimov2002-svg/geopro/main/docs/dl/GeoPro_Setup_1.4.3.exe
+- Yuklab olish (Windows 10/11): https://raw.githubusercontent.com/braimov2002-svg/geopro/main/docs/dl/GeoPro_Setup_1.4.4.exe
 - To'liq qo'llanma (PDF): [o'zbekcha](docs/GeoPro_qollanma_uz.pdf) · [ruscha](docs/GeoPro_qollanma_ru.pdf)
 - Yangilanishlar (1.3.5+): dastur ishga tushganda va har 4 soatda [`latest-v3.json`](latest-v3.json) ni tekshiradi, yangi versiyani fonda yuklab oladi va yopilganda eski versiya o'rniga o'rnatadi (yoki «Yangilash» tugmasi bilan darhol); yuklangan o'rnatuvchi keyin o'chiriladi. `latest.json` va `latest-v2.json` muzlatilgan: 1.0–1.3.4 o'zi yangilana olmaydi — bir marta joriy o'rnatuvchini o'rnatish kerak
 - Telegram: https://t.me/geopro_uz · Instagram: https://instagram.com/geopro.uz
 
 ## 1.4 da nima yangi
+
+1.4.4: «Tanlab eksport qilish…», «Hisob parametrlari» va «Tarix → Tuzatish uchun ochish» oynalarida OK yana ishlaydi (PySide6 6.12 bilan buzilgan edi); eksport paytida boshqa fayl ochilsa ham natija, tarix va balans eksport qilingan faylga yoziladi; birorta fayl yozilmasa balans yechilmaydi; AutoCAD DWG yozmasa DXF saqlanadi va xabar chiqadi; «Loyihalar»dan qayta ochilgan ishning sanasi saqlanadi; eksportdan keyin eskirgan avtosaqlash taklif qilinmaydi; oldingi uzunroq eksportdan qolgan listlar Savatga o'tkaziladi.
 
 1.4.3: natija fayli (Excel, PDF, DWG) boshqa dasturda ochiq qolsa, dastur fayl nomi bilan aniq xabar beradi (ilgari inglizcha «Permission denied» chiqardi); DWG bosqichi to'xtasa ham vaqtinchalik DXF'lar qolmaydi.
 
