@@ -1,8 +1,8 @@
 {
  "version": "1.3.3",
- "url": "https://raw.githubusercontent.com/braimov2002-svg/geopro/main/docs/dl/GeoPro_Setup_1.6.0.exe",
- "size": 51667559,
- "sha256": "fd95bd61712f1151e113328f68653fc76e7209b5e9f6e9a0bf4d61f067ab49c3",
+ "url": "https://raw.githubusercontent.com/braimov2002-svg/geopro/main/docs/dl/GeoPro_Setup_1.6.1.exe",
+ "size": 51683308,
+ "sha256": "18462f668e48c1c047859c1ea6d5653c613850078de36b29467ea158a7473c0c",
  "notes": "«Loyihalar» bo'limi: DWG + shtamp + ko'p TXT birdan tayyorlanadi. DWG birligi (mm/m) avtomatik, chizma o'z joyiga tushadi va listda yonidagi bino/devorlar chiqadi. Uzun transheya bir nechta listga bo'linadi. Barqarorlik tuzatishlari.",
  "date": "2026-10-26",
  "payment": {

@@ -1,10 +1,10 @@
 {
- "version": "1.6.0",
- "url": "https://raw.githubusercontent.com/braimov2002-svg/geopro/main/docs/dl/GeoPro_Setup_1.6.0.exe",
- "size": 51667559,
- "sha256": "fd95bd61712f1151e113328f68653fc76e7209b5e9f6e9a0bf4d61f067ab49c3",
- "notes": "GeoPro 1.6.0: alohida «Tahrir» sahifasi — loyiha chizmasi, s'yomka nuqtalari va shtampni AutoCAD / Civil / Revit'dagidek tahrirlash: buyruq qatori (L, PL, M, CO, RO, SC, MI, O, X…), tortilish va Orto, xossalar va qatlamlar, bo'laklash (Explode), o'lcham, otmetka, koordinata, qiyalik. Revit: IFC modelni plan ostiga ochish va Revit uchun eksport (nuqtalar CSV, kotlovan yuzasi 3D DXF). Asl DWG o'zgarmaydi. PDF qo'llanma yangilandi.",
- "date": "2026-10-27",
+ "version": "1.6.1",
+ "url": "https://raw.githubusercontent.com/braimov2002-svg/geopro/main/docs/dl/GeoPro_Setup_1.6.1.exe",
+ "size": 51683308,
+ "sha256": "18462f668e48c1c047859c1ea6d5653c613850078de36b29467ea158a7473c0c",
+ "notes": "GeoPro 1.6.1: ijro sxemasi listi tartibli — plan listga sig'adigan eng katta masshtabda (sarlavhadan kesimgacha joyni to'ldiradi, o'rtada, otmetkalar sarlavha va shtampga tegmaydi), sarlavhaning hamma qatorlari o'rtada, yon yozuv bo'lmasa chap ustun chizilmaydi. «Tahrir» sahifasi, AutoCAD / Civil / Revit asboblari, IFC va Revit eksport — 1.6.0 dan.",
+ "date": "2026-10-28",
  "page": "https://github.com/braimov2002-svg/geopro/tree/main/docs/dl",
  "auto_from": "1.3.5",
  "payment": {
