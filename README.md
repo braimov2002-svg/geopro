@@ -3,10 +3,14 @@
 Taxeometr / nivelir TXT faylidan tayyor ijro sxemasi (DXF, PDF, Excel) — AutoCAD va Civil 3D'siz.
 
 - Sayt: https://braimov2002-svg.github.io/geopro/ (GitHub Pages, `docs/` papkasi; geopro.uz — boshqa kompaniyaning domeni, bizniki emas)
-- Yuklab olish (Windows 10/11): https://raw.githubusercontent.com/braimov2002-svg/geopro/main/docs/dl/GeoPro_Setup_1.6.1.exe
+- Yuklab olish (Windows 10/11): https://raw.githubusercontent.com/braimov2002-svg/geopro/main/docs/dl/GeoPro_Setup_1.7.0.exe
 - To'liq qo'llanma (PDF): [o'zbekcha](docs/GeoPro_qollanma_uz.pdf) · [ruscha](docs/GeoPro_qollanma_ru.pdf)
 - Yangilanishlar (1.3.5+): dastur ishga tushganda va har 4 soatda [`latest-v3.json`](latest-v3.json) ni tekshiradi, yangi versiyani fonda yuklab oladi va yopilganda eski versiya o'rniga o'rnatadi (yoki «Yangilash» tugmasi bilan darhol); yuklangan o'rnatuvchi keyin o'chiriladi. `latest.json` va `latest-v2.json` muzlatilgan: 1.0–1.3.4 o'zi yangilana olmaydi — bir marta joriy o'rnatuvchini o'rnatish kerak
 - Telegram: https://t.me/geopro_uz · Instagram: https://instagram.com/geopro.uz
+
+## 1.7 da nima yangi
+
+1.7.0: **plita, styajka, beton va peskobeton tayyorlovi** — bunday s'yomkani dastur o'zi taniydi (hamma otmetkalar bir yoki bir necha tekis sathda): brovka, tub, hajm va razrez chizilmaydi, listda har nuqta. Stansiyalar hisobga kirmaydi: raqamli nomlar orasidagi bir-ikkita harfli nom (JMJ204) va raqamlar ketma-ketligidan tashqari, hamma nuqtalardan 0,8 m+ baland yozuvlar (asbob plita ustida yoki chuqur yonidagi yerda). Bir faylda yonma-yon bir necha kottej (har biri o'z sathida) bo'lsa — har biri alohida uchastka va list; bitta plitaning pastki terrasasi, chuqurlari, to'sinlari o'zida qoladi. O'ng panelda **«Loyiha otmetkalari (plita, styajka)»** — har uchastka uchun loyiha otmetkasi: kiritilsa, listda har nuqtada loyihadan og'ish mm da (namunadagidek: 12, 0, -7), planda loyiha otmetkasi ramkada, sarlavhada «на отметке 472.950 (-4.250)», izohda og'ishlar, ShNQ 3.01.03-19 dopuski (20 mm, «Qo'shimcha»da o'zgartiriladi) va undan oshgan nuqtalar soni; kiritilmasa — haqiqiy otmetkalar. Excel'da «Отметки поверхности» varag'i. Kontur chetdagi nuqtalar bo'yicha (aniq chegara — loyiha chizmasidan yoki o'ng tugma → «Plita / styajka cheti (kontur)»); avtomatik aniqlash adashsa — «Qo'shimcha» → «S'yomka turi» (faqat ochiq fayl uchun). Plitadagi bir necha santimetrlik botiq yoki do'nglik dopusk hisobida qoladi, terrasa kabi boshqa sath (loyihadan 10 sm+) alohida ko'rsatiladi; qo'lda boshqa uchastkaga o'tkazilgan nuqta ko'rinib turgan raqamli uchastkaga tushadi. Kotlovan va transheyalar avvalgidek (barcha eski kotlovan/transheya namunalarida va 21 ta sun'iy kotlovanda natija 1.6.1 bilan aynan bir xil; tubi tekis sayoz kotlovan uchun jurnalda maslahat). Yangi test `tests/test_surface.py` (8 ta haqiqiy plita/styajka s'yomkasi); qo'llanmalarda yangi bob.
 
 ## 1.6 da nima yangi
 
